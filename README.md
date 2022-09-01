@@ -22,3 +22,7 @@ Repositório destinado para listar todos os arquivos dos desafios que irão send
 ### Glassmorphism Effect 
 
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/73366668/187955137-e7e13fe0-6f2c-4a63-bf42-35ed68a736ac.gif)
+
+### Timer e Switch Button Dark Mode
+
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/73366668/188011030-6b5832d1-ff29-408f-8f93-aa8df9d3a3ed.gif)
