@@ -14,3 +14,11 @@ Repositório destinado para listar todos os arquivos dos desafios que irão send
  ### Calculadora 🖩
  
  ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/73366668/187774661-bece60c8-c30c-4de9-b6ea-c8abc923ba9d.gif)
+
+### Erro404 Page
+
+![image](https://user-images.githubusercontent.com/73366668/187924415-1ef42b74-0f96-43f6-a601-0ffc716e7291.png)
+
+### Glassmorphism Effect 
+
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/73366668/187955137-e7e13fe0-6f2c-4a63-bf42-35ed68a736ac.gif)
