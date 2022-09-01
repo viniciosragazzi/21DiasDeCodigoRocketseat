@@ -18,7 +18,11 @@ btnEqual.addEventListener("click", () => {
   let r = eval(contaText);
   console.log(r);
   if (contaText.length > 2 && r) {
+    contaText = r
     result.innerHTML = r;
+    conta.innerHTML = r;
+
+
   } else {
     result.innerHTML = "Conta Invalida";
   }
