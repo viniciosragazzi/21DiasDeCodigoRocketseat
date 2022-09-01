@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/ad89a88ad8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="switchMode">
+        <label for="switchModeInput">
+          <input type="checkbox" name="switchModeInput" id="switchModeInput" />
+          <div class="switchButton">
+
+          </div>
+        </label>
+      </div>
+      <div class="timer">
+        <h1>TIMER</h1>
+        <div class="timerArea">
+          <div class="timerBox">
+            <span class="value hora">00</span>
+            <span class="descValue">Hora</span>
+          </div>
+          <div class="timerBox">
+            <span class="value minute">00</span>
+            <span class="descValue">Minuto</span>
+          </div>
+          <div class="timerBox">
+            <span class="value segundo">00</span>
+            <span class="descValue">Segundo</span>
+          </div>
+        </div>
+        <div class="buttonsArea">
+          <button type="button" class="start">start</button>
+          <button type="button"  class="pause">pause</button>
+          <button type="button"  class="reset">reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/script/main.js"></script>
+</html>

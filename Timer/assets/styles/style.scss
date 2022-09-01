@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white:#fff;
+    --bg:#04001b;
+    --bgCard:#011c2c;
+    --orange:#fd6259;
+    --green:#03ae85;
+    --switchBG:#002b44d8;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Roboto Mono", monospace;
+    min-height: 100vh;
+    background-color: var(--bg);
+
+    .app {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .timer {
+            width: min(43rem, 100vw);
+            min-height: 31rem;
+            background-color: var(--bgCard);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 6px solid var(--orange);
+            border-radius: 1rem;
+            .timerArea {
+                display: flex;
+                justify-content: space-around;
+                gap: 3rem;
+
+                .timerBox {
+                    width: 10.9rem;
+                    display: grid;
+                    justify-content: center;
+                    text-align: center;
+                    gap: 1rem;
+                    span {
+                        &.value {
+                            font-size: 4.5rem;
+                            border: 2px solid var(--white);
+                            padding: 0 2rem;
+                            border-radius: 1rem;
+                        }
+
+                        &.descValue {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+            .buttonsArea {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                button {
+                    width: 100%;
+                    max-width: 11.8rem;
+                    height: 3rem;
+                    text-transform: uppercase;
+                    color: var(--white);
+                    border: none;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+
+
+                    &.disabled{
+                        opacity: .5 !important;
+                        cursor: auto;
+                    }
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                    &:nth-child(1) {
+                        background-color: var(--green);
+                        color: white;
+                    }
+                    &:nth-child(2) {
+                        background-color: transparent;
+                        border: 1px solid var(--white);
+                    }
+                    &:nth-child(3) {
+                        background-color: var(--orange);
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .switchMode {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            label {
+                input {
+                    display: none;
+
+                    &:checked{
+                        + .switchButton{
+                            &::after {
+                                transform: translateX(5rem);
+                            }
+                        }
+                    }
+                }
+                .switchButton {
+                    width: 8rem;
+                    height: 3.4rem;
+                    background-color: var(--switchBG);
+                    border-radius: 1rem;
+                    position: relative;
+                    cursor: pointer;
+                    &::after {
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f185";
+                        width: 3.4rem;
+                        height: 100%;
+                        background-color: var(--green);
+                        position: absolute;
+                        border-radius: 50%;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.8rem;
+                        transition: .4s ease transform;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 40%;
+    }
+    body {
+        padding: 2rem;
+    }
+}
