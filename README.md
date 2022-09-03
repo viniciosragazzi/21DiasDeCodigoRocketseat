@@ -27,6 +27,12 @@ Repositório destinado para listar todos os arquivos dos desafios que irão send
 
 ![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/73366668/188011030-6b5832d1-ff29-408f-8f93-aa8df9d3a3ed.gif)
 
-### Loading Bar e Formulário de Login![ezgif com-gif-maker](https://user-images.githubusercontent.com/73366668/188283482-50d1b418-e2ce-4ae3-9415-c038b7c8e9e5.gif)
+### Loading Bar e Formulário de Login
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/73366668/188283482-50d1b418-e2ce-4ae3-9415-c038b7c8e9e5.gif)
+
+### ParticleJS
+
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/73366668/188287357-ea117a51-e49d-4c92-870f-a06245c5b24e.gif)
 
 
