@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+    src="https://kit.fontawesome.com/ad89a88ad8.js"
+    crossorigin="anonymous"
+  ></script>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Welcome - Loading</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="initial">
+        <header class="header">
+          <a href="#">
+            <img src="./assets/medias/logo.png" alt="Logo" />
+            <h1>SparkOS</h1>
+          </a>
+        </header>
+        <main>
+          <section class="texts">
+            <div class="textArea">
+              <p>
+                SparkOS -- FireBios - v14.13b, a Lase check (TM) Ally Copyright
+                (c) 2022
+              </p>
+              <p>SparkDev Systems, INC</p>
+            </div>
+            <div class="textArea">
+              <p>CRVS 1.0 Deluxe ACPI BIOS rev 1008</p>
+            </div>
+            <div class="textArea">
+              <p>Main Processor : PLY Powertron(tm) 23Mhz</p>
+              <p>Memory Testing : 640k OK/p></p>
+            </div>
+  
+            <div class="textArea">
+              <p>...</p>
+            </div>
+            <div class="textArea">
+              <p>Memory Frequency is at 16 Mhz, Quad Channel mode</p>
+              <p>Primary Master : CRVS ECH1000-23</p>
+              <p>Primary Slave : Empty</p>
+              <p>Secondary Master : CRVS DSK-100 Floppy Disk Drive</p>
+              <p>Secondary Slave : Empty</p>
+            </div>
+          </section>
+  
+          <div class="barLoading"></div>
+        </main>
+        <footer>
+          <p>Press DEL to enter SETUP: press Alt+F2 to enter Spark utility</p>
+          <p>01/09/2022-CRVS-PPP-1.0</p>
+        </footer>
+  
+      
+      </div>
+      <div class="loginForm">
+        <div class="logo">
+          <img src="./assets/medias/logo.png" alt="Logo" />
+        </div>
+        <div class="content">
+          <h1>CONTROLE DE ACESSO</h1>
+          <span class="desc"
+            >Digite os seguintes dados para acessar o sistem SparkOS</span
+          >
+
+          <form>
+            <div class="inputArea areaUser">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" placeholder="usuario"  name="password"
+              id="user" required />
+            </div>
+            <div class="inputArea areaPassword">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="senha"
+                required
+              />
+            </div>
+            <button type="button" class="btnSubmit">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/script/main.js"></script>
+</html>

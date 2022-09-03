@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto Mono", monospace;
+  min-height: 100vh;
+  background-image: url("../medias/bg.png");
+  background-size: cover;
+  background-position: center;
+}
+body .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 4rem;
+  gap: 3rem;
+}
+body .app.login {
+  align-items: center;
+}
+body .app.login .initial {
+  display: none;
+}
+body .app.login .loginForm {
+  display: flex !important;
+  -webkit-animation: show2 0.5s ease forwards;
+          animation: show2 0.5s ease forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+body .app header a {
+  display: flex;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  gap: 0.6rem;
+}
+body .app header a img {
+  width: 3.6rem;
+}
+body .app main {
+  font-size: 1.4rem;
+  display: grid;
+  gap: 6rem;
+}
+body .app main .texts {
+  display: grid;
+  gap: 4rem;
+  color: #1cbb4a;
+}
+body .app main .texts .textArea {
+  display: grid;
+  gap: 0.4rem;
+  opacity: 0;
+}
+body .app main .texts .textArea:nth-child(1) {
+  -webkit-animation: show 0s forwards;
+          animation: show 0s forwards;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+body .app main .texts .textArea:nth-child(2) {
+  -webkit-animation: show 0s forwards;
+          animation: show 0s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+body .app main .texts .textArea:nth-child(3) {
+  -webkit-animation: show 0s forwards;
+          animation: show 0s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+body .app main .texts .textArea:nth-child(4) {
+  -webkit-animation: show 0s forwards;
+          animation: show 0s forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+body .app main .texts .textArea:nth-child(5) {
+  -webkit-animation: show 0s forwards;
+          animation: show 0s forwards;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+body .app main .barLoading {
+  width: 100%;
+  height: 1.2rem;
+  background-color: #0b4426;
+  position: relative;
+}
+body .app main .barLoading::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: #1ffd5f;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: preencher 4s forwards;
+          animation: preencher 4s forwards;
+}
+body .app footer {
+  color: white;
+  font-size: 1.4rem;
+}
+body .app .loginForm {
+  width: min(50rem, 100vw);
+  min-height: 38rem;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  text-align: center;
+  color: white;
+  gap: 2rem;
+  opacity: 0;
+  transform: scale(0.8);
+  display: none;
+  opacity: 0;
+}
+body .app .loginForm .err {
+  border: 2px solid red !important;
+  color: red !important;
+  -webkit-animation: 0.4s tremer;
+          animation: 0.4s tremer;
+}
+body .app .loginForm .err input::-moz-placeholder {
+  color: red !important;
+}
+body .app .loginForm .err input:-ms-input-placeholder {
+  color: red !important;
+}
+body .app .loginForm .err input::placeholder {
+  color: red !important;
+}
+body .app .loginForm .logo img {
+  width: 7.6rem;
+}
+body .app .loginForm .content {
+  display: grid;
+  gap: 1rem;
+}
+body .app .loginForm .content h1 {
+  font-size: 2.4rem;
+}
+body .app .loginForm .content span.desc {
+  font-size: 1.2rem;
+}
+body .app .loginForm .content form {
+  display: grid;
+  gap: 1.4rem;
+  padding-top: 1.4rem;
+}
+body .app .loginForm .content form .inputArea {
+  width: 100%;
+  height: 4rem;
+  border: 2px solid white;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body .app .loginForm .content form .inputArea input {
+  width: 100%;
+  height: 3.6rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: white;
+}
+body .app .loginForm .content form .inputArea input::-moz-placeholder {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+body .app .loginForm .content form .inputArea input:-ms-input-placeholder {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+body .app .loginForm .content form .inputArea input::placeholder {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+body .app .loginForm .content form button {
+  width: 100%;
+  height: 3.6rem;
+  border: none;
+  background-color: #1ffd5f;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+body .app .loginForm .content form button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 620px) {
+  .app {
+    padding: 3rem !important;
+  }
+  body .app main .texts .textArea:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  .loginForm {
+    border: none !important;
+  }
+}
+@-webkit-keyframes preencher {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 20%;
+  }
+  40% {
+    width: 45%;
+  }
+  58% {
+    width: 65%;
+  }
+  78% {
+    width: 85%;
+  }
+  88% {
+    width: 90%;
+  }
+  90% {
+    width: 95%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes preencher {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 20%;
+  }
+  40% {
+    width: 45%;
+  }
+  58% {
+    width: 65%;
+  }
+  78% {
+    width: 85%;
+  }
+  88% {
+    width: 90%;
+  }
+  90% {
+    width: 95%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show2 {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: scale(0.8);
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes show2 {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: scale(0.8);
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes tremer {
+  0% {
+    transform: translateX(4px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+@keyframes tremer {
+  0% {
+    transform: translateX(4px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}/*# sourceMappingURL=style.css.map */
