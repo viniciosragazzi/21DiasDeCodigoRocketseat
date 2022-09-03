@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto Mono", monospace;
+  min-height: 100vh;
+  background-color: azure;
+  .app {
+      min-height: 100vh;
+  }
+}

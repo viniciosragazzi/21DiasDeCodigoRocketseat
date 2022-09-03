@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ad89a88ad8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script/particles.js"></script>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Name</title>
+  </head>
+  <body>
+    <div class="app" id="particles-js">
+      <h1>ParticleJS</h1>
+      <div id="peixes"></div>
+      <div id="peixes2"></div>
+      <div class="areaAlga">
+        <div class="alga">
+          <img
+            src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/67/Tall_Seagrass_JE1_BE2.gif"
+            alt="alga"
+          />
+        </div>
+        <div class="alga">
+          <img
+            src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/67/Tall_Seagrass_JE1_BE2.gif"
+            alt="alga"
+          />
+        </div>
+        <div class="alga">
+          <img
+            src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/67/Tall_Seagrass_JE1_BE2.gif"
+            alt="alga"
+          />
+        </div>
+        <div class="alga">
+          <img
+            src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/67/Tall_Seagrass_JE1_BE2.gif"
+            alt="alga"
+          />
+        </div>
+      </div>
+      <div class="areia">
+        <img src="./assets/medias/585983994f6ae202fedf28b4 (1).png" alt="areia">
+      </div>
+    </div>
+  </body>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 30, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+        },
+        size: {
+          value: 6,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+        },
+        line_linked: {
+          enable: false,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "top",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false, mode: "bubble" },
+          onclick: { enable: false, mode: "push" },
+          resize: true,
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 },
+        },
+      },
+      retina_detect: true,
+    });
+    particlesJS("peixes2", {
+      particles: {
+        number: { value: 15, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "image",
+          stroke: {
+            width: 2,
+            color: "#a80cc0",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+          image: {
+            src: "https://images.emojiterra.com/twitter/v13.1/512px/1f420.png",
+            width: 100,
+            height: 100,
+          },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+        },
+        size: {
+          value: 30,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+        },
+        line_linked: {
+          enable: false,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "left",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false, mode: "bubble" },
+          onclick: { enable: false, mode: "push" },
+          resize: true,
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 },
+        },
+      },
+      retina_detect: true,
+    });
+    particlesJS("peixes", {
+      particles: {
+        number: { value: 15, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "image",
+          stroke: {
+            width: 2,
+            color: "#a80cc0",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+          image: {
+            src: "https://cdn-icons-png.flaticon.com/512/858/858398.png",
+            width: 100,
+            height: 100,
+          },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+        },
+        size: {
+          value: 30,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+        },
+        line_linked: {
+          enable: false,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "right",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false, mode: "bubble" },
+          onclick: { enable: false, mode: "push" },
+          resize: true,
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 },
+        },
+      },
+      retina_detect: true,
+    });
+  </script>
+  <script src="./assets/script/main.js"></script>
+</html>

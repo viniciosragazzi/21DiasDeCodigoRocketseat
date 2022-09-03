@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  min-height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgb(2, 0, 36) 0%, rgb(18, 125, 176) 41%, rgb(0, 212, 255) 100%);
+  overflow: hidden;
+}
+body .app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+body .app h1 {
+  position: absolute;
+  left: 50vw;
+  top: 10vh;
+  transform: translateX(-50%);
+  color: #66ff00;
+  font-size: 4.6rem;
+}
+body #peixes, body #peixes2 {
+  width: 100vw;
+  height: 100vh;
+  background: none;
+  position: absolute;
+}
+body .areaAlga {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: -20px;
+  gap: 25rem;
+}
+body .areaAlga .alga {
+  width: 140px;
+}
+body .areaAlga .alga img {
+  width: 100%;
+}
+body .areia {
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: -50vw;
+  z-index: -10;
+}
+body .areia img {
+  width: 200vw;
+  height: 200px;
+}/*# sourceMappingURL=style.css.map */
