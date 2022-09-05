@@ -35,4 +35,8 @@ Repositório destinado para listar todos os arquivos dos desafios que irão send
 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/73366668/188287357-ea117a51-e49d-4c92-870f-a06245c5b24e.gif)
 
+### Galeria Simples
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/73366668/188463065-e393b866-e001-4d73-8929-5c742b61da4a.gif)
+
 
