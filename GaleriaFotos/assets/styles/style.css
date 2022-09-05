@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #121214;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto Mono", monospace;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+body .app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+body .app .galeria .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+body .app .galeria .container .foto {
+  display: flex;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+}
+body .app .galeria .container .foto img {
+  width: min(50rem, 80vw);
+  max-height: 60rem;
+}
+body .app .galeria .container .carrossel .arrowArea {
+  display: flex;
+  color: white;
+  width: 100%;
+  max-width: 65vw;
+  position: absolute;
+  top: 40%;
+  justify-content: space-between;
+}
+body .app .galeria .container .carrossel .arrowArea .arrow {
+  background-color: #202024;
+  font-size: 2.4rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+body .app .galeria .container .js-carousel {
+  max-width: 65vw;
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+  background-color: #202024;
+  padding: 1rem;
+}
+body .app .galeria .container .js-carousel .carousel.imgActive img {
+  border: 2px solid white;
+}
+body .app .galeria .container .js-carousel img {
+  width: min(14rem, 16vw);
+}
+
+.glider-slide {
+  min-width: 0;
+}
+
+.glider-track {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  body .app .galeria .container .js-carousel {
+    max-width: 95vw;
+  }
+  .foto {
+    height: 20rem !important;
+  }
+  .arrowArea {
+    max-width: 95vw !important;
+  }
+}/*# sourceMappingURL=style.css.map */
