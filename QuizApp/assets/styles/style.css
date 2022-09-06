@@ -25,6 +25,7 @@ body .app .topTitle {
   color: white;
   padding: 4rem 2rem;
   background-image: linear-gradient(90deg, #7b3be7 0%, #5c2ee0 100%);
+  z-index: 99;
 }
 body .app .topTitle span:nth-child(1) {
   display: flex;
@@ -44,18 +45,19 @@ body .app .topTitle .txt p {
 }
 body .app .bottomContent {
   width: 100%;
+  align-self: center;
   background-color: white;
   border-radius: 3rem 3rem 0 0;
   position: relative;
   top: -2rem;
 }
-body .app .bottomContent .container {
+body .app .bottomContent .cardsArea {
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
-body .app .bottomContent .container .card {
+body .app .bottomContent .cardsArea .card {
   display: grid;
   justify-content: center;
   width: max(11.4rem, 14vw);
@@ -65,13 +67,13 @@ body .app .bottomContent .container .card {
   padding: 0.5rem;
   margin-bottom: 2rem;
 }
-body .app .bottomContent .container .card:nth-child(2) .imgArea span {
+body .app .bottomContent .cardsArea .card:nth-child(2) .imgArea span {
   color: #ff732b !important;
 }
-body .app .bottomContent .container .card:nth-child(4) .imgArea span {
+body .app .bottomContent .cardsArea .card:nth-child(4) .imgArea span {
   color: #be4fc1 !important;
 }
-body .app .bottomContent .container .card .top {
+body .app .bottomContent .cardsArea .card .top {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -79,50 +81,129 @@ body .app .bottomContent .container .card .top {
   color: #5c2ee0;
   font-size: max(2.4rem, 3vw);
 }
-body .app .bottomContent .container .card .top .imgArea {
+body .app .bottomContent .cardsArea .card .top .imgArea {
   display: grid;
   justify-items: center;
   align-items: center;
   text-align: center;
 }
-body .app .bottomContent .container .card .top .imgArea img {
+body .app .bottomContent .cardsArea .card .top .imgArea img {
   width: max(4.6rem, 5vw);
 }
-body .app .bottomContent .container .card .top .imgArea span {
+body .app .bottomContent .cardsArea .card .top .imgArea span {
   font-weight: bolder;
   color: #ff4d79;
   font-size: max(1.6rem, 1vw);
 }
-body .app .bottomContent .container .card .top .svgArea {
+body .app .bottomContent .cardsArea .card .top .svgArea {
   padding: 0.1rem;
   cursor: pointer;
 }
-body .app .bottomContent .container .card .top .svgArea i {
+body .app .bottomContent .cardsArea .card .top .svgArea i {
   transition: 0.4s ease transform;
 }
-body .app .bottomContent .container .card .top .svgArea i:hover {
+body .app .bottomContent .cardsArea .card .top .svgArea i:hover {
   transform: scale(0.9);
 }
-body .app .bottomContent .container .card .bottom {
+body .app .bottomContent .cardsArea .card .bottom {
   font-size: max(1.2rem, 1.2vw);
   display: grid;
   gap: 1rem;
 }
-body .app .bottomContent .container .card .bottom .barProgress {
+body .app .bottomContent .cardsArea .card .bottom .barProgress {
   width: 100%;
   height: 0.7rem;
   background-color: #e9eaee;
   position: relative;
 }
-body .app .bottomContent .container .card .bottom .barProgress .bar {
+body .app .bottomContent .cardsArea .card .bottom .barProgress .bar {
   position: absolute;
   width: 20%;
   height: 100%;
   background-color: #5c2ee0;
 }
+body .app .bottomContent .nivelArea {
+  padding: 17rem 2rem;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3rem 3rem 0 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  gap: 3rem;
+  transition: 0.4s ease transform;
+  z-index: 2;
+  transform: translateX(-100vw);
+}
+body .app .bottomContent .nivelArea.showNivel {
+  display: flex;
+  transform: translateY(0vh);
+}
+body .app .bottomContent .nivelArea #backInicio {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  color: #5c2ee0;
+  cursor: pointer;
+  transition: 0.4s ease color;
+}
+body .app .bottomContent .nivelArea #backInicio:hover {
+  color: #7b3be7;
+}
+body .app .bottomContent .nivelArea .txt {
+  text-align: center;
+}
+body .app .bottomContent .nivelArea .txt h2 {
+  color: #5c2ee0;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+body .app .bottomContent .nivelArea .txt span.tema {
+  color: #ee8700;
+  font-weight: bolder;
+}
+body .app .bottomContent .nivelArea ul {
+  list-style: none;
+  display: grid;
+  gap: 3rem;
+  width: 100%;
+  max-width: 54rem;
+}
+body .app .bottomContent .nivelArea ul li {
+  width: 100%;
+  height: 4rem;
+  background-color: #e9eaee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #eee5ff;
+  transition: 0.4s all ease;
+}
+body .app .bottomContent .nivelArea ul li:hover {
+  color: white;
+  background-color: #5c2ee0;
+}
+body .app .bottomContent .nivelArea ul li:active {
+  transform: scale(0.95);
+}
+body .app .bottomContent .nivelArea ul li span {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+body .app .bottomContent .nivelArea ul li span i {
+  color: #ffb619;
+}
 
 @media screen and (max-width: 268px) {
-  body .app .bottomContent .container {
+  body .app .bottomContent .cardsArea {
     grid-template-columns: 1fr;
   }
   body .app .topTitle span:nth-child(2) {
@@ -140,7 +221,7 @@ body .app .bottomContent .container .card .bottom .barProgress .bar {
     justify-content: center;
     top: 0;
   }
-  body .app .bottomContent .container {
+  body .app .bottomContent .cardsArea {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
   }
