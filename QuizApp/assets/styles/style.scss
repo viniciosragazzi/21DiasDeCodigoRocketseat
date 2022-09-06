@@ -23,7 +23,7 @@ body {
       justify-content: center;
       gap: 4rem;
       color: white;
-      padding: 4rem 2rem;
+      padding: 6rem 2rem;
       background-image: linear-gradient(90deg, #7b3be7 0%, #5c2ee0 100%);
       z-index: 99;
       span {
@@ -47,12 +47,12 @@ body {
     }
     .showNivel {
       display: flex !important;
-      transform: translateY(0vh) !important;
+      transform: translateX(0vh) !important;
     }
     .backBtn {
       position: absolute;
       top: 1rem;
-      left: 1rem;
+      left: 2rem;
       font-size: 2rem;
       color: #5c2ee0;
       cursor: pointer;
@@ -152,7 +152,7 @@ body {
         }
       }
       .nivelArea {
-        padding:17rem 2rem;
+        padding: 17rem 2rem;
         background-color: #ffffff;
         width: 100%;
         height: 100%;
@@ -169,9 +169,7 @@ body {
         z-index: 5;
         transform: translateX(-200vw);
 
-        
-       
-        .txt{
+        .txt {
           text-align: center;
           h2 {
             color: #5c2ee0;
@@ -179,7 +177,7 @@ body {
             gap: 1rem;
             padding-bottom: 1rem;
           }
-          span.tema{
+          span.tema {
             color: #ee8700;
             font-weight: bolder;
           }
@@ -220,7 +218,7 @@ body {
           }
         }
       }
-      .perguntasArea{
+      .perguntasArea {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -230,7 +228,6 @@ body {
         transform: translateX(-200vw);
         background-color: white;
         border-radius: 3rem 3rem 0 0;
-
       }
     }
   }
@@ -248,6 +245,7 @@ body {
   .quiz {
     display: flex;
     min-height: 100vh;
+    overflow: hidden;
   }
   body .app .bottomContent {
     display: flex;
@@ -263,4 +261,18 @@ body {
     max-width: 500px !important;
     padding: 9rem 2rem;
   }
+}
+
+@media screen and (max-width: 630px) {
+  body .app .bottomContent .perguntasArea.transform {
+    transform: translateX(0vh) translateY(-40%) !important;
+
+  }
+}
+
+@media (max-width: 630px) and (min-height: 650px) {
+
+body .app .bottomContent {
+    padding-top: 25% ;
+}
 }

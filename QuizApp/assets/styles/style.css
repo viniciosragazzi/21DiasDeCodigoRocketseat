@@ -23,7 +23,7 @@ body .app .topTitle {
   justify-content: center;
   gap: 4rem;
   color: white;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   background-image: linear-gradient(90deg, #7b3be7 0%, #5c2ee0 100%);
   z-index: 99;
 }
@@ -45,12 +45,12 @@ body .app .topTitle .txt p {
 }
 body .app .showNivel {
   display: flex !important;
-  transform: translateY(0vh) !important;
+  transform: translateX(0vh) !important;
 }
 body .app .backBtn {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 2rem;
   font-size: 2rem;
   color: #5c2ee0;
   cursor: pointer;
@@ -226,6 +226,7 @@ body .app .bottomContent .perguntasArea {
   .quiz {
     display: flex;
     min-height: 100vh;
+    overflow: hidden;
   }
   body .app .bottomContent {
     display: flex;
@@ -240,5 +241,15 @@ body .app .bottomContent .perguntasArea {
   body .app .topTitle {
     max-width: 500px !important;
     padding: 9rem 2rem;
+  }
+}
+@media screen and (max-width: 630px) {
+  body .app .bottomContent .perguntasArea.transform {
+    transform: translateX(0vh) translateY(-40%) !important;
+  }
+}
+@media (max-width: 630px) and (min-height: 650px) {
+  body .app .bottomContent {
+    padding-top: 25%;
   }
 }/*# sourceMappingURL=style.css.map */
