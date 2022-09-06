@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  min-height: 100vh;
+}
+body .app {
+  min-height: 100vh;
+  position: relative;
+}
+body .app .topTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  color: white;
+  padding: 4rem 2rem;
+  background-image: linear-gradient(90deg, #7b3be7 0%, #5c2ee0 100%);
+}
+body .app .topTitle span:nth-child(1) {
+  display: flex;
+  gap: 0.5rem;
+  font-size: max(1.6rem, 1.4vw);
+}
+body .app .topTitle .txt {
+  display: grid;
+  gap: 1rem;
+}
+body .app .topTitle .txt h1 {
+  font-size: max(2.4rem, 2.4vw);
+  font-weight: 600;
+}
+body .app .topTitle .txt p {
+  font-size: max(1.4rem, 1.2vw);
+}
+body .app .bottomContent {
+  width: 100%;
+  background-color: white;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: -2rem;
+}
+body .app .bottomContent .container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+body .app .bottomContent .container .card {
+  display: grid;
+  justify-content: center;
+  width: max(11.4rem, 14vw);
+  height: max(13.2rem, 15vw);
+  border: 1px solid #e9eaee;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+body .app .bottomContent .container .card:nth-child(2) .imgArea span {
+  color: #ff732b !important;
+}
+body .app .bottomContent .container .card:nth-child(4) .imgArea span {
+  color: #be4fc1 !important;
+}
+body .app .bottomContent .container .card .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #5c2ee0;
+  font-size: max(2.4rem, 3vw);
+}
+body .app .bottomContent .container .card .top .imgArea {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+body .app .bottomContent .container .card .top .imgArea img {
+  width: max(4.6rem, 5vw);
+}
+body .app .bottomContent .container .card .top .imgArea span {
+  font-weight: bolder;
+  color: #ff4d79;
+  font-size: max(1.6rem, 1vw);
+}
+body .app .bottomContent .container .card .top .svgArea {
+  padding: 0.1rem;
+  cursor: pointer;
+}
+body .app .bottomContent .container .card .top .svgArea i {
+  transition: 0.4s ease transform;
+}
+body .app .bottomContent .container .card .top .svgArea i:hover {
+  transform: scale(0.9);
+}
+body .app .bottomContent .container .card .bottom {
+  font-size: max(1.2rem, 1.2vw);
+  display: grid;
+  gap: 1rem;
+}
+body .app .bottomContent .container .card .bottom .barProgress {
+  width: 100%;
+  height: 0.7rem;
+  background-color: #e9eaee;
+  position: relative;
+}
+body .app .bottomContent .container .card .bottom .barProgress .bar {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #5c2ee0;
+}
+
+@media screen and (max-width: 268px) {
+  body .app .bottomContent .container {
+    grid-template-columns: 1fr;
+  }
+  body .app .topTitle span:nth-child(2) {
+    font-size: max(2.4rem, 3vw);
+  }
+}
+@media screen and (min-width: 630px) {
+  .quiz {
+    display: flex;
+    min-height: 100vh;
+  }
+  body .app .bottomContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+  }
+  body .app .bottomContent .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  body .app .topTitle {
+    max-width: 500px !important;
+    padding: 9rem 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

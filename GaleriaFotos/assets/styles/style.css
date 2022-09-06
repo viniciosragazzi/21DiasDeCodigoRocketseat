@@ -79,6 +79,7 @@ body .app .galeria .container .js-carousel img {
 .glider-track {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 }
 
 @media (max-width: 480px) {
