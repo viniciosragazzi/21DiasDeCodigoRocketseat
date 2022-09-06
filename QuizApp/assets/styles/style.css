@@ -43,6 +43,22 @@ body .app .topTitle .txt h1 {
 body .app .topTitle .txt p {
   font-size: max(1.4rem, 1.2vw);
 }
+body .app .showNivel {
+  display: flex !important;
+  transform: translateY(0vh) !important;
+}
+body .app .backBtn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  color: #5c2ee0;
+  cursor: pointer;
+  transition: 0.4s ease color;
+}
+body .app .backBtn:hover {
+  color: #7b3be7;
+}
 body .app .bottomContent {
   width: 100%;
   align-self: center;
@@ -136,25 +152,9 @@ body .app .bottomContent .nivelArea {
   justify-content: center;
   display: flex;
   gap: 3rem;
-  transition: 0.4s ease transform;
-  z-index: 2;
-  transform: translateX(-100vw);
-}
-body .app .bottomContent .nivelArea.showNivel {
-  display: flex;
-  transform: translateY(0vh);
-}
-body .app .bottomContent .nivelArea #backInicio {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  font-size: 2rem;
-  color: #5c2ee0;
-  cursor: pointer;
-  transition: 0.4s ease color;
-}
-body .app .bottomContent .nivelArea #backInicio:hover {
-  color: #7b3be7;
+  transition: 0.2s ease transform;
+  z-index: 5;
+  transform: translateX(-200vw);
 }
 body .app .bottomContent .nivelArea .txt {
   text-align: center;
@@ -185,6 +185,7 @@ body .app .bottomContent .nivelArea ul li {
   align-items: center;
   border: 2px solid #eee5ff;
   transition: 0.4s all ease;
+  cursor: pointer;
 }
 body .app .bottomContent .nivelArea ul li:hover {
   color: white;
@@ -200,6 +201,17 @@ body .app .bottomContent .nivelArea ul li span {
 }
 body .app .bottomContent .nivelArea ul li span i {
   color: #ffb619;
+}
+body .app .bottomContent .perguntasArea {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: 0.4s ease transform;
+  z-index: 10;
+  transform: translateX(-200vw);
+  background-color: white;
+  border-radius: 3rem 3rem 0 0;
 }
 
 @media screen and (max-width: 268px) {
