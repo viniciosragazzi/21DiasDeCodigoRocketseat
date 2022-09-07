@@ -17,13 +17,15 @@ body {
   .app {
     min-height: 100vh;
     position: relative;
+
+    
     .topTitle {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 4rem;
       color: white;
-      padding: 6rem 2rem;
+      padding: 3rem 2rem 6rem 2rem;
       background-image: linear-gradient(90deg, #7b3be7 0%, #5c2ee0 100%);
       z-index: 99;
       span {
@@ -165,7 +167,7 @@ body {
         justify-content: center;
         display: flex;
         gap: 3rem;
-        transition: 0.2s ease transform;
+        transition: 0.1s ease transform;
         z-index: 5;
         transform: translateX(-200vw);
 
@@ -176,6 +178,7 @@ body {
             display: flex;
             gap: 1rem;
             padding-bottom: 1rem;
+            font-size: max(2.2rem, 2.4vw);
           }
           span.tema {
             color: #ee8700;
@@ -228,6 +231,115 @@ body {
         transform: translateX(-200vw);
         background-color: white;
         border-radius: 3rem 3rem 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 1.8rem 2rem 2rem 2rem;
+        .top{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+
+          i{
+            font-size: 2rem;
+            color: #251550;
+            cursor: pointer;
+            transition: 0.4s ease color;
+          }
+          span{
+            color: #251550;
+
+            font-weight: 600;
+            font-size: 1.8srem;
+          }
+        }
+        .content{
+          display: grid;
+          gap: 3rem;
+          .barQuantQuestion{
+            display: grid;
+            gap: 2rem;
+            .top{
+              font-size: 1.4rem;
+
+              .tempoRestante{
+                color: #ffb619;
+                i{
+                  font-size: 1.3rem;
+                }
+                span, i{
+                  color: #ffb619;
+                }
+              }
+            }
+            .bar{
+              width: 100%;
+              height: .8rem;
+              background-color: #e9eaee;
+              border-radius: 1rem;
+              overflow: hidden;
+              .progress{
+                width: 60%;
+                height: 100%;
+                background-color: #5c2ee0;
+              }
+            }
+          }
+          .questionBox{
+            display: grid;
+            gap: 3rem;
+            .pergunta{
+              .perguntaAtual{
+                padding-right: .5rem;
+                color: #251550;
+                font-weight: 600;
+              }
+              .perguntaTxt{
+                color: #251550;
+                font-size: 1.6rem;
+                
+              }
+            }
+            .respostas{
+              border: 1px solid #efe6ff;
+              padding: 1rem;
+              border-radius: 1rem;
+              .form{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                label{
+                  input{
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    margin-right: .5rem;
+                    outline: none;
+                    border: 1px solid #251550;
+                    appearance: none;
+                    position: relative;
+
+                    &:checked::before{
+                      opacity: 1;
+                    }
+                    &::before{
+                      content: '';
+                      position: absolute;
+                      width: 60%;
+                      height: 60%;
+                      background-color: #5c2ee0;
+                      border-radius: 50%;
+                      opacity: 0;
+                      left: 50%;
+                      top: 50%;
+                      transform: translateX(-50%) translateY(-50%);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -267,6 +379,14 @@ body {
   body .app .bottomContent .perguntasArea.transform {
     transform: translateX(0vh) translateY(-40%) !important;
 
+  }
+  .app.modeQuestion{
+    padding-top: 4rem;
+    .topTitle, .cardsArea, .nivelArea{
+      opacity: 0;
+      padding: 0;
+      display: none;
+    }
   }
 }
 

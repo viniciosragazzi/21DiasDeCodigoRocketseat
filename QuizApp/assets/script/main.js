@@ -1,3 +1,8 @@
+
+const infos ={
+tema:'', nivel:''
+}
+
 const plays = document.querySelectorAll(".svgArea i");
 const nivelArea = document.querySelector(".nivelArea"),
   backInicio = document.querySelector("#backInicio"),
@@ -5,7 +10,10 @@ const nivelArea = document.querySelector(".nivelArea"),
 plays.forEach((play) => {
   play.addEventListener("click", (p) => {
     nivelArea.classList.add("showNivel");
-    tema.innerText = p.path[2].children[0].innerText;
+    infos.tema =  p.path[2].children[0].innerText;
+    tema.innerText = infos.tema
+   
+
   });
 });
 
@@ -15,16 +23,24 @@ backInicio.addEventListener("click", () => {
 
 const niveis = document.querySelectorAll(".niveis li"),
   perguntasArea = document.querySelector(".perguntasArea"),
-  backNiveis = document.querySelector("#backNiveis");
+  backNiveis = document.querySelector("#backNiveis"),
+  app = document.querySelector(".app"),
+  nivelQuestion =  document.querySelector(".nivelQuestion");
 
 niveis.forEach((n) => {
   n.addEventListener("click", (e) => {
-    console.log(e.path[1].innerText);
+    
+    app.classList.add("modeQuestion");
+
     perguntasArea.classList.add("showNivel");
+    infos.nivel = e.target.innerText
+    nivelQuestion.innerText = infos.nivel 
+console.log(infos);
   });
 });
 
 backNiveis.addEventListener("click", () => {
-   perguntasArea.classList.remove("showNivel");
 
+   perguntasArea.classList.remove("showNivel");
+   app.classList.remove("modeQuestion");
 });

@@ -23,7 +23,7 @@ body .app .topTitle {
   justify-content: center;
   gap: 4rem;
   color: white;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem 6rem 2rem;
   background-image: linear-gradient(90deg, #7b3be7 0%, #5c2ee0 100%);
   z-index: 99;
 }
@@ -152,7 +152,7 @@ body .app .bottomContent .nivelArea {
   justify-content: center;
   display: flex;
   gap: 3rem;
-  transition: 0.2s ease transform;
+  transition: 0.1s ease transform;
   z-index: 5;
   transform: translateX(-200vw);
 }
@@ -164,6 +164,7 @@ body .app .bottomContent .nivelArea .txt h2 {
   display: flex;
   gap: 1rem;
   padding-bottom: 1rem;
+  font-size: max(2.2rem, 2.4vw);
 }
 body .app .bottomContent .nivelArea .txt span.tema {
   color: #ee8700;
@@ -212,6 +213,108 @@ body .app .bottomContent .perguntasArea {
   transform: translateX(-200vw);
   background-color: white;
   border-radius: 3rem 3rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.8rem 2rem 2rem 2rem;
+}
+body .app .bottomContent .perguntasArea .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+body .app .bottomContent .perguntasArea .top i {
+  font-size: 2rem;
+  color: #251550;
+  cursor: pointer;
+  transition: 0.4s ease color;
+}
+body .app .bottomContent .perguntasArea .top span {
+  color: #251550;
+  font-weight: 600;
+  font-size: 1.8srem;
+}
+body .app .bottomContent .perguntasArea .content {
+  display: grid;
+  gap: 3rem;
+}
+body .app .bottomContent .perguntasArea .content .barQuantQuestion {
+  display: grid;
+  gap: 2rem;
+}
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .top {
+  font-size: 1.4rem;
+}
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante {
+  color: #ffb619;
+}
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante i {
+  font-size: 1.3rem;
+}
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante span, body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante i {
+  color: #ffb619;
+}
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .bar {
+  width: 100%;
+  height: 0.8rem;
+  background-color: #e9eaee;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .bar .progress {
+  width: 60%;
+  height: 100%;
+  background-color: #5c2ee0;
+}
+body .app .bottomContent .perguntasArea .content .questionBox {
+  display: grid;
+  gap: 3rem;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .pergunta .perguntaAtual {
+  padding-right: 0.5rem;
+  color: #251550;
+  font-weight: 600;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .pergunta .perguntaTxt {
+  color: #251550;
+  font-size: 1.6rem;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas {
+  border: 1px solid #efe6ff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label input {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  outline: none;
+  border: 1px solid #251550;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label input:checked::before {
+  opacity: 1;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label input::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: #5c2ee0;
+  border-radius: 50%;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 @media screen and (max-width: 268px) {
@@ -246,6 +349,14 @@ body .app .bottomContent .perguntasArea {
 @media screen and (max-width: 630px) {
   body .app .bottomContent .perguntasArea.transform {
     transform: translateX(0vh) translateY(-40%) !important;
+  }
+  .app.modeQuestion {
+    padding-top: 4rem;
+  }
+  .app.modeQuestion .topTitle, .app.modeQuestion .cardsArea, .app.modeQuestion .nivelArea {
+    opacity: 0;
+    padding: 0;
+    display: none;
   }
 }
 @media (max-width: 630px) and (min-height: 650px) {
