@@ -76,11 +76,11 @@ body .app .bottomContent .cardsArea {
 body .app .bottomContent .cardsArea .card {
   display: grid;
   justify-content: center;
-  width: max(11.4rem, 14vw);
-  height: max(13.2rem, 15vw);
+  width: max(11.4rem, 12vw);
+  height: max(13.2rem, 13vw);
   border: 1px solid #e9eaee;
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   margin-bottom: 2rem;
 }
 body .app .bottomContent .cardsArea .card:nth-child(2) .imgArea span {
@@ -234,9 +234,22 @@ body .app .bottomContent .perguntasArea .top span {
   font-weight: 600;
   font-size: 1.8srem;
 }
+body .app .bottomContent .perguntasArea .spinnerArea {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .app .bottomContent .perguntasArea .spinnerArea .spinner {
+  font-size: 3.8rem;
+  -webkit-animation: spinner 1.4s ease-in-out infinite;
+          animation: spinner 1.4s ease-in-out infinite;
+}
 body .app .bottomContent .perguntasArea .content {
   display: grid;
   gap: 3rem;
+  display: none;
 }
 body .app .bottomContent .perguntasArea .content .barQuantQuestion {
   display: grid;
@@ -251,7 +264,8 @@ body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRe
 body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante i {
   font-size: 1.3rem;
 }
-body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante span, body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante i {
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante span,
+body .app .bottomContent .perguntasArea .content .barQuantQuestion .top .tempoRestante i {
   color: #ffb619;
 }
 body .app .bottomContent .perguntasArea .content .barQuantQuestion .bar {
@@ -284,10 +298,32 @@ body .app .bottomContent .perguntasArea .content .questionBox .respostas {
   padding: 1rem;
   border-radius: 1rem;
 }
+body .app .bottomContent .perguntasArea .content .questionBox .respostas form {
+  display: grid;
+  gap: 2rem;
+}
 body .app .bottomContent .perguntasArea .content .questionBox .respostas .form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label {
+  padding: 1rem 0.2rem;
+  border-radius: 0.6rem;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label.respCorreta {
+  background: #a8f1a8;
+  color: green;
+  border-radius: 0.6rem;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label.respCorreta input::before {
+  background-color: green;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label.respErrada {
+  background: #efa2a2;
+  color: #8f1111;
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label.respErrada input::before {
+  background-color: #8f1111;
 }
 body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label input {
   width: 15px;
@@ -315,6 +351,33 @@ body .app .bottomContent .perguntasArea .content .questionBox .respostas .form l
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+body .app .bottomContent .perguntasArea .content .questionBox .respostas .form label span {
+  z-index: -1;
+}
+body .app .bottomContent .perguntasArea .content .questionBox button {
+  border: none;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  background-color: #5c2ee0;
+  color: white;
+  border-radius: 1rem;
+  transition: 0.5s ease background;
+  width: 100%;
+  max-width: 40rem;
+  justify-self: center;
+  cursor: pointer;
+  justify-content: center;
+}
+body .app .bottomContent .perguntasArea .content .questionBox button.proximaPergunta {
+  display: none;
+  background-color: #ee8700;
+}
+body .app .bottomContent .perguntasArea .content .questionBox button.verResultado {
+  display: none;
+}
+body .app .bottomContent .perguntasArea .content .questionBox button:hover {
+  background-color: #251550;
 }
 
 @media screen and (max-width: 268px) {
@@ -353,7 +416,9 @@ body .app .bottomContent .perguntasArea .content .questionBox .respostas .form l
   .app.modeQuestion {
     padding-top: 4rem;
   }
-  .app.modeQuestion .topTitle, .app.modeQuestion .cardsArea, .app.modeQuestion .nivelArea {
+  .app.modeQuestion .topTitle,
+.app.modeQuestion .cardsArea,
+.app.modeQuestion .nivelArea {
     opacity: 0;
     padding: 0;
     display: none;
@@ -362,5 +427,21 @@ body .app .bottomContent .perguntasArea .content .questionBox .respostas .form l
 @media (max-width: 630px) and (min-height: 650px) {
   body .app .bottomContent {
     padding-top: 25%;
+  }
+}
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=style.css.map */

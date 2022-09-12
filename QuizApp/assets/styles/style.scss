@@ -18,7 +18,6 @@ body {
     min-height: 100vh;
     position: relative;
 
-    
     .topTitle {
       display: flex;
       flex-direction: column;
@@ -79,11 +78,11 @@ body {
         .card {
           display: grid;
           justify-content: center;
-          width: max(11.4rem, 14vw);
-          height: max(13.2rem, 15vw);
+          width: max(11.4rem, 12vw);
+          height: max(13.2rem, 13vw);
           border: 1px solid #e9eaee;
           border-radius: 1rem;
-          padding: 0.5rem;
+          padding: 1rem;
 
           margin-bottom: 2rem;
           &:nth-child(2) {
@@ -233,97 +232,139 @@ body {
         border-radius: 3rem 3rem 0 0;
         display: flex;
         flex-direction: column;
+
         gap: 3rem;
         padding: 1.8rem 2rem 2rem 2rem;
-        .top{
+        .top {
           display: flex;
           width: 100%;
           justify-content: space-between;
 
-          i{
+          i {
             font-size: 2rem;
             color: #251550;
             cursor: pointer;
             transition: 0.4s ease color;
           }
-          span{
+          span {
             color: #251550;
 
             font-weight: 600;
             font-size: 1.8srem;
           }
         }
-        .content{
+        .spinnerArea {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .spinner {
+            font-size: 3.8rem;
+            animation: spinner 1.4s ease-in-out infinite;
+          }
+        }
+        .content {
           display: grid;
           gap: 3rem;
-          .barQuantQuestion{
+          display: none;
+
+          .barQuantQuestion {
             display: grid;
             gap: 2rem;
-            .top{
+            .top {
               font-size: 1.4rem;
 
-              .tempoRestante{
+              .tempoRestante {
                 color: #ffb619;
-                i{
+                i {
                   font-size: 1.3rem;
                 }
-                span, i{
+                span,
+                i {
                   color: #ffb619;
                 }
               }
             }
-            .bar{
+            .bar {
               width: 100%;
-              height: .8rem;
+              height: 0.8rem;
               background-color: #e9eaee;
               border-radius: 1rem;
               overflow: hidden;
-              .progress{
+              .progress {
                 width: 60%;
                 height: 100%;
                 background-color: #5c2ee0;
               }
             }
           }
-          .questionBox{
+          .questionBox {
             display: grid;
             gap: 3rem;
-            .pergunta{
-              .perguntaAtual{
-                padding-right: .5rem;
+            .pergunta {
+              .perguntaAtual {
+                padding-right: 0.5rem;
                 color: #251550;
                 font-weight: 600;
               }
-              .perguntaTxt{
+              .perguntaTxt {
                 color: #251550;
                 font-size: 1.6rem;
-                
               }
             }
-            .respostas{
+            .respostas {
               border: 1px solid #efe6ff;
               padding: 1rem;
               border-radius: 1rem;
-              .form{
+              form {
+                display: grid;
+                gap: 2rem;
+              }
+              .form {
                 display: flex;
                 flex-direction: column;
-                gap: 2rem;
-                label{
-                  input{
+                label {
+                  padding: 1rem 0.2rem;
+                  border-radius: 0.6rem;
+
+                  &.respCorreta {
+                    background: #a8f1a8;
+                    color: green;
+                    border-radius: 0.6rem;
+                    input{
+                      &::before {
+                      background-color: green;
+                        
+                      }
+                    }
+                  }
+                  &.respErrada {
+                    background: #efa2a2;
+                    color: #8f1111;
+                    input{
+                      &::before {
+                      background-color: #8f1111;
+                        
+                      }
+                    }
+                  }
+                  input {
                     width: 15px;
                     height: 15px;
                     border-radius: 50%;
-                    margin-right: .5rem;
+                    margin-right: 0.5rem;
                     outline: none;
                     border: 1px solid #251550;
                     appearance: none;
                     position: relative;
 
-                    &:checked::before{
+                    &:checked::before {
                       opacity: 1;
                     }
-                    &::before{
-                      content: '';
+                    &::before {
+                      content: "";
                       position: absolute;
                       width: 60%;
                       height: 60%;
@@ -335,7 +376,37 @@ body {
                       transform: translateX(-50%) translateY(-50%);
                     }
                   }
+                  span {
+                    z-index: -1;
+                  }
                 }
+              }
+            }
+            button {
+              border: none;
+              padding: 2rem 0;
+              margin-bottom: 2rem;
+              background-color: #5c2ee0;
+              color: white;
+              border-radius: 1rem;
+              transition: 0.5s ease background;
+              width: 100%;
+              max-width: 40rem;
+              justify-self: center;
+              cursor: pointer;
+              justify-content: center;
+
+              &.proximaPergunta{
+                display: none;
+                background-color: #ee8700;
+
+              }
+
+              &.verResultado{
+                display: none;
+              }
+              &:hover {
+                background-color: #251550;
               }
             }
           }
@@ -378,11 +449,12 @@ body {
 @media screen and (max-width: 630px) {
   body .app .bottomContent .perguntasArea.transform {
     transform: translateX(0vh) translateY(-40%) !important;
-
   }
-  .app.modeQuestion{
+  .app.modeQuestion {
     padding-top: 4rem;
-    .topTitle, .cardsArea, .nivelArea{
+    .topTitle,
+    .cardsArea,
+    .nivelArea {
       opacity: 0;
       padding: 0;
       display: none;
@@ -391,8 +463,17 @@ body {
 }
 
 @media (max-width: 630px) and (min-height: 650px) {
-
-body .app .bottomContent {
-    padding-top: 25% ;
+  body .app .bottomContent {
+    padding-top: 25%;
+  }
 }
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
