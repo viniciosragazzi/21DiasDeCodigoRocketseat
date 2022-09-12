@@ -42,6 +42,27 @@ const dados = {
               answers: ["12", "13", "14", "15"],
               correct_answer: 4,
             },
+            {
+              number: 3,
+              question:
+                "The next number in the sequence <b>1, 3, 6, 10, </b> is:",
+              answers: ["11", "05", "14", "12"],
+              correct_answer: 2,
+            },
+            {
+              number: 4,
+              question:
+                "The next number in the sequence <b>1, 3, 6, 10, </b> is:",
+              answers: ["06", "07", "64", "25"],
+              correct_answer: 1,
+            },
+            {
+              number: 5,
+              question:
+                "The next number in the sequence <b>1, 3, 6, 10, </b> is:",
+              answers: ["21", "31", "41", "75"],
+              correct_answer: 2,
+            },
           ],
         },
       ],
@@ -125,7 +146,7 @@ const dados = {
           ],
         },
       ],
-      avancado: [
+      avançado: [
         {
           questions: [
             {
@@ -186,7 +207,7 @@ const dados = {
           ],
         },
       ],
-      avancado: [
+      avançado: [
         {
           questions: [
             {
@@ -247,7 +268,7 @@ const dados = {
           ],
         },
       ],
-      avancado: [
+      avançado: [
         {
           questions: [
             {
@@ -411,11 +432,17 @@ enviarRespBtn.addEventListener("click", () => {
         console.log("certo");
       } else {
         labelRespostas[i].classList.add("respErrada");
+        labelRespostas[respostaCorreta-1].classList.add("respCorreta");
+
         infos.quantErradas =  infos.quantErradas + 1
         infos.perguntaErradas.push(perguntaAtual+1)
 
         console.log("errado");
       }
+    }
+   
+    if(checado){
+      input.disabled  = true
     }
   });
 

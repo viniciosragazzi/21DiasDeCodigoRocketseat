@@ -156,8 +156,13 @@ body .app .bottomContent .nivelArea {
   z-index: 5;
   transform: translateX(-200vw);
 }
+body .app .bottomContent .nivelArea .bx {
+  width: 100%;
+  text-align: -webkit-center;
+}
 body .app .bottomContent .nivelArea .txt {
   text-align: center;
+  margin-bottom: 1rem;
 }
 body .app .bottomContent .nivelArea .txt h2 {
   color: #5c2ee0;
@@ -165,6 +170,7 @@ body .app .bottomContent .nivelArea .txt h2 {
   gap: 1rem;
   padding-bottom: 1rem;
   font-size: max(2.2rem, 2.4vw);
+  justify-content: center;
 }
 body .app .bottomContent .nivelArea .txt span.tema {
   color: #ee8700;
@@ -373,6 +379,9 @@ body .app .bottomContent .perguntasArea .content .questionBox button.proximaPerg
   display: none;
   background-color: #ee8700;
 }
+body .app .bottomContent .perguntasArea .content .questionBox button.proximaPergunta:hover {
+  background-color: #c46f00;
+}
 body .app .bottomContent .perguntasArea .content .questionBox button.verResultado {
   display: none;
 }
@@ -407,6 +416,12 @@ body .app .bottomContent .perguntasArea .content .questionBox button:hover {
   body .app .topTitle {
     max-width: 500px !important;
     padding: 9rem 2rem;
+  }
+  body .app.modeQuestion .bx {
+    opacity: 0;
+  }
+  body .app.modeQuestion .topTitle {
+    display: none !important;
   }
 }
 @media screen and (max-width: 630px) {

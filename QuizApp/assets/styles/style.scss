@@ -169,15 +169,20 @@ body {
         transition: 0.1s ease transform;
         z-index: 5;
         transform: translateX(-200vw);
-
+        .bx{
+          width: 100%;
+    text-align: -webkit-center;
+        }
         .txt {
           text-align: center;
+          margin-bottom: 1rem;
           h2 {
             color: #5c2ee0;
             display: flex;
             gap: 1rem;
             padding-bottom: 1rem;
             font-size: max(2.2rem, 2.4vw);
+            justify-content: center;
           }
           span.tema {
             color: #ee8700;
@@ -399,11 +404,14 @@ body {
               &.proximaPergunta{
                 display: none;
                 background-color: #ee8700;
-
+                &:hover {
+                  background-color: #c46f00;
+                }
               }
 
               &.verResultado{
                 display: none;
+               
               }
               &:hover {
                 background-color: #251550;
@@ -443,6 +451,13 @@ body {
   body .app .topTitle {
     max-width: 500px !important;
     padding: 9rem 2rem;
+    
+  }
+  body .app.modeQuestion .bx {
+    opacity: 0;
+  }
+  body .app.modeQuestion .topTitle {
+    display: none !important;
   }
 }
 
